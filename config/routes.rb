@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   
   #users_controller routes 
   get 'signup'  => 'users#new'
+  resources :users, except: [:new]
   
 
 end
