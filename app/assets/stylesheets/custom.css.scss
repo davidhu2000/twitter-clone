@@ -182,3 +182,19 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+/* users index */
+.users {
+  list-style: none;
+  margin: 0;
+  a {
+    overflow: auto;
+    padding: 10px 10px;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+.delete-button {
+  margin-left: -100px;
+  margin-top: 16px;
+}
