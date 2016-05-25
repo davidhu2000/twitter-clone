@@ -12,6 +12,8 @@
   <%= f.label :password_confirmation, "Confirmation" %>
   <%= f.password_field :password_confirmation, class: "form-control" %>
   
-  <%= f.submit("Update Profile", class:"btn btn-success") %>
+  
+  
+  <%= f.submit(@user.new_record? ? "Create Profile" : "Update Profile" , class:"btn btn-success") %>
 
 <% end %>

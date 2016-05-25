@@ -7,12 +7,24 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # ! raises an exception if it causes an error
-User.create!(name: "Example User", email: "example@rails.com", password: "dudeyeah", password_confirmation: "dudeyeah", admin: true)
+User.create!(name:                  "Example User", 
+             email:                 "example@rails.com", 
+             password:              "dudeyeah", 
+             password_confirmation: "dudeyeah", 
+             admin:                 true,
+             activated:             true,
+             activated_at:          Time.zone.now)
 
 99.times { |n|
   name     = Faker::Name.name
   email    = "example-#{n+1}@railstutorial.org"
   password = "password"
   admin    = false
-  User.create!(name: name, email: email, password: password, password_confirmation: password, admin: admin)
+  User.create!(name:                  name, 
+               email:                 email, 
+               password:              password, 
+               password_confirmation: password, 
+               admin:                 admin,
+               activated:             true,
+               activated_at:          Time.zone.now)
 }
