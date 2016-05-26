@@ -28,7 +28,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     log_in_as(@user)
     get users_path
     assert_template 'users/index'
-    assert_select 'a[href=?]', text: 'delete', count: 0
+    assert_select 'a', text: 'delete', count: 0
   end
   
 end

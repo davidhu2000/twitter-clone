@@ -1,7 +1,7 @@
 <% if obj.errors.any? %>
   <div class="row" id="error_explanation">
-    <div class="col-md-6 col-md-offset-3 alert alert-danger">
-      <p>The form contains <%= pluralize(@user.errors.count, "error") %>.</p>
+    <div class="col-md-10 col-md-offset-1 alert alert-danger">
+      <p>The form contains <%= pluralize(obj.errors.count, "error") %>.</p>
       <ul>
         <% obj.errors.full_messages.each do |error| %>
           <li><%= error %></li>
